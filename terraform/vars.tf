@@ -15,5 +15,5 @@ variable "vm_size" {
 variable "vms" {
     type =  list(string)
     description = "Propositos de las vm"
-    default = ["master","worker","nfs"]
+    default = ["master-nfs","worker"]
 }
