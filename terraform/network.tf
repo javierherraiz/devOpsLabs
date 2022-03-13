@@ -36,7 +36,7 @@ resource "azurerm_network_interface" "myNic" {
 
     ip_configuration {
     name                           = "myipconfiguration${var.vms[count.index]}"
-    subnet_id                      = "azurerm_subnet.mySubnet.id 
+    subnet_id                      = azurerm_subnet.mySubnet.id 
     private_ip_address_allocation  = "Static"
     private_ip_address             = "10.0.${count.index +10}.${count.index +10}"
     public_ip_address_id           = "azurerm_public_ip.myPublicIp.id
