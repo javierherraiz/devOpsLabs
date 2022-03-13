@@ -1,5 +1,5 @@
 [all:vars]
-ansible_user= jherraiz
+ansible_user= adminUsername
 
 [master-nfs]
 51.124.240.77
