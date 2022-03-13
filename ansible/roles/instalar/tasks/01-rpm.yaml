@@ -2,6 +2,6 @@
 
 name: instalar or actualizar paquetes
 dnf:
-  name: 'tree'
+  name: "{{ rmps }}"
   state: present
   become : true

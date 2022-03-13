@@ -1,9 +1,9 @@
 [all:vars]
-ansible_user= adminUsername
+ansible_user= jherraiz
 
 [master-nfs]
 51.124.240.77
 
 [worker]
-20.224.111.200
+20.224.111.200 ansible_user = ansibleclient
 
