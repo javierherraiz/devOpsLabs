@@ -2,6 +2,6 @@
 
 name: instalar or actualizar paquetes
 dnf:
-  name: 'net-tools'
+  name: 'tree'
   state: present
   become : true
