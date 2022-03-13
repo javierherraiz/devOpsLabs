@@ -1,7 +1,7 @@
 ---
 
-- name: instalar or actualizar paquetes
-    dnf:
-      name: "{{ rpms }}"
-      state: present
-      become : true
+- name: instalar
+  dnf:
+    name: "{{ rpms }}"
+    state: present
+    become : true
