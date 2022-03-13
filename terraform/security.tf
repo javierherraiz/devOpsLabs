@@ -3,7 +3,7 @@
 
 resource "azurerm_network_security_group" "mySecGroup" {
     count               = length(var.vms)
-    name                = "sshtraffic_var.vms[count.index]"
+    name                = "sshtraffic_${var.vms[count.index]}"
     location            = azurerm_resource_group.rg.location
     resource_group_name = azurerm_resource_group.rg.name
 
