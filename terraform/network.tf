@@ -4,7 +4,7 @@
 resource "azurerm_virtual_network" "myNet" {
     count               = length(var.vms)
     name                = "kubernetesnet${var.vms[count.index]}"
-    address_space       = ["10.0.0.${count.index}/16"]
+    address_space       = ["10.0.0.0/16"]
     location            = azurerm_resource_group.rg.location
     resource_group_name = azurerm_resource_group.rg.name
 
