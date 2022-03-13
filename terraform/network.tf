@@ -2,7 +2,7 @@
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network
 
 resource "azurerm_virtual_network" "myNet" {
-    count               = length(vars.vms)
+    count               = length(var.vms)
     name                = "kubernetesnet_var.vms[count.index]"
     address_space       = ["10.0.0.${count.index}/16"]
     location            = azurerm_resource_group.rg.location
@@ -17,7 +17,7 @@ resource "azurerm_virtual_network" "myNet" {
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet
 
 resource "azurerm_subnet" "mySubnet" {
-    count                  = length(vars.vms)
+    count                  = length(var.vms)
     name                   = "terraformsubnet_var.vms[count.index]"
     resource_group_name    = azurerm_resource_group.rg.name
     virtual_network_name   = azurerm_virtual_network.myNet.name
@@ -29,7 +29,7 @@ resource "azurerm_subnet" "mySubnet" {
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
 
 resource "azurerm_network_interface" "myNic" {
-  count               = length(vars.vms)
+  count               = length(var.vms)
   name                = "vmnic_var.vms[count.index]"  
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
