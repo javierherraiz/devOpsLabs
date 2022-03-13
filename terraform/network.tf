@@ -39,7 +39,7 @@ resource "azurerm_network_interface" "myNic" {
     subnet_id                      = "azurerm_subnet.mySubnet${var.vms[count.index]}".id 
     private_ip_address_allocation  = "Static"
     private_ip_address             = "10.0.${count.index +10}.${count.index +10}"
-    public_ip_address_id           = azurerm_public_ip.myPublicIp"${var.vms[count.index]}".id
+    public_ip_address_id           = "azurerm_public_ip.myPublicIp${var.vms[count.index]}".id
   }
 
     tags = {
