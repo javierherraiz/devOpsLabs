@@ -3,6 +3,5 @@
 - name : instalar paquetes
   hosts: all
   gather_facts: false
-  role:
+  roles:
     - instalar
-    - reiniciar
