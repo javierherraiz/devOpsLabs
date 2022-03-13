@@ -4,3 +4,4 @@ name: instalar or actualizar paquetes
 dnf:
   name: 'net-tools'
   state: present
+  become : true
