@@ -1,0 +1,6 @@
+---
+
+name: instalar or actualizar paquetes
+dnf:
+  name: "netstats"
+  state: latest
