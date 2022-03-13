@@ -1,8 +1,8 @@
 ---
 
-name : instalar paquetes
-hosts: all
-gather_facts: false
-role:
-  - instalar
-  - reiniciar
+- name : instalar paquetes
+  hosts: all
+  gather_facts: false
+  role:
+    - instalar
+    - reiniciar
