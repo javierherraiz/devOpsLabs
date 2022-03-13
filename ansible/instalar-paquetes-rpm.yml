@@ -6,4 +6,4 @@
     "group_vars/instalar.yaml"
   gather_facts: false
   roles:
-    - instalar  
+    - instalar
