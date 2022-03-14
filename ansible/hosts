@@ -2,8 +2,7 @@
 ansible_user= adminUsername
 
 [master-nfs]
-20.126.32.21
+13.69.127.91
 
 [worker]
-20.126.3.184
-
+13.81.254.30
